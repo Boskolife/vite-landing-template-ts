@@ -21,6 +21,7 @@
     }
   },
   "devDependencies": {
+    "@poliklot/prettier-plugin-handlebars": "^0.2.12",
     "@types/node": "^20.11.0",
     "@typescript-eslint/eslint-plugin": "^8.60.0",
     "@typescript-eslint/parser": "^8.60.0",

@@ -1,9 +1,14 @@
-<header class="site-header" id="header">
+<header id="header" class="site-header">
   <div class="container">
-    <a class="site-header__brand" href="#hero">Brand</a>
-    <nav aria-label="Primary" class="site-header__nav">
-      <a href="#features">Features</a>
-      <a href="#cta">Get started</a>
-    </nav>
+    <a class="site-header__brand" href="#hero">{{ site.brand }}</a>
+    {{#if site.nav.length}}
+      <nav class="site-header__nav" aria-label="Primary">
+        {{#each site.nav}}
+          <a href="{{ href }}">
+            {{ label }}
+          </a>
+        {{/each}}
+      </nav>
+    {{/if}}
   </div>
 </header>

@@ -1,15 +1,25 @@
-<section class="section" id="features" aria-labelledby="features-title">
+<section id="features" class="section" aria-labelledby="features-title">
   <div class="container">
-    <h2 class="section__title" id="features-title">Features</h2>
-    <p class="section__text">
-      Add 3–6 key points here. Keep copy short and scannable for better
-      readability.
-    </p>
-    <ul>
-      <li>Fast build & hot reload</li>
-      <li>Reusable Handlebars sections</li>
-      <li>SCSS structure ready for scaling</li>
-    </ul>
+    {{#if site.features.title}}
+      <h2 id="features-title" class="section__title">
+        {{upper site.features.title}}
+      </h2>
+    {{/if}}
+
+    {{#if site.features.text}}
+      <p class="section__text">
+        {{ site.features.text }}
+      </p>
+    {{/if}}
+
+    {{#if site.features.items.length}}
+      <ul>
+        {{#each site.features.items}}
+          <li>
+            {{ this }}
+          </li>
+        {{/each}}
+      </ul>
+    {{/if}}
   </div>
 </section>
-
